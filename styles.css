@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none !important;
+    font-family: "Poppins",sans-serif;
+}
+
+.main-content-bt{
+    gap: 9rem !important;
+}
+
+.text-bt{
+    padding:15%;
+}
+
+.text-trial{
+    font-weight: 700;
+    color: blue;
+}
+
+.text-bt h2{
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+.big-img{
+    border: 10px solid rgb(189, 189, 189);
+    border-radius: 25px !important;
+    height: 30rem;
+    width: 34rem !important;
+}
+
+.small-img{
+    height: 20rem;
+    width: 14rem !important;
+    margin-top: 12rem;
+    margin-left: 15rem;
+    border: 10px solid rgb(189, 189, 189);
+    border-radius: 25px !important;
+}
+
+footer {
+    color: white;
+    background-color: rgb(3, 34, 61);
+}
+
+footer a{
+    color: white;
+}
+
+.f-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 6rem;
+}
+
+.footer-right {
+    display: flex;
+    gap: 4rem;
+}
+
+.f-nav-sup a{
+    font-weight: 200;
+    transition: color 0.3s ease;
+}
+
+.f-nav-sup a:hover{
+    color: rgb(68, 68, 251);
+}
+
+.f-nav-add a{
+    font-weight: 200;
+    transition: color 0.3s ease;
+}
+
+.f-nav-add a:hover{
+    color: rgb(68, 68, 251);
+}
+
+.c-champ {
+    max-width: 360px;
+}
+
+.course-card{
+    position: relative;
+    width: 260px ;
+    height: 420px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.course-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.course-info {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translate(-50%, 20px);
+    padding: 18px 40px;
+    background: rgba(83, 83, 83, 0.084);
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+    opacity: 0;
+    pointer-events: none;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.course-name {
+    margin: 0;
+}
+
+.course-location {
+    margin: 4px 0 0;
+    font-weight: 700;
+}
+
+.course-card:hover .course-info {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.h-nav a{
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.h-nav a:hover{
+    color: rgb(139, 139, 255);
+}
+
+.bc-card{
+    transition: transform 0.3s ease;
+}
+
+.bc-card:hover{
+    transform: translateY(-10%) scale(1.05);
+}
