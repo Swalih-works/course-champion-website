@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B");
 
+:root {
+  --primary: #4f46e5;      /* Indigo */
+  --primary-dark: #3730a3;
+  --accent: #22c55e;       /* Soft green */
+  --bg-main: #f9fafb;      /* Page background */
+  --bg-card: #ffffff;
+  --text-dark: #111827;
+  --text-muted: #6b7280;
+  --border-light: #e5e7eb;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -10,6 +21,16 @@
     font-family: "Poppins",sans-serif;
 }
 
+header {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+}
+
 .main-content-bt{
     gap: 9rem !important;
 }
@@ -18,18 +39,27 @@
     padding:15%;
 }
 
+.text-bt p {
+  color: var(--text-muted);
+  max-width: 480px;
+}
+
 .text-trial{
     font-weight: 700;
-    color: blue;
+    color: var(--primary);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
 }
 
 .text-bt h2{
+    color: var(--text-dark);
     font-size: 2.8rem;
     font-weight: 900;
 }
 
 .big-img{
-    border: 10px solid rgb(189, 189, 189);
+    border: 10px solid var(--primary);
     border-radius: 25px !important;
     height: 30rem;
     width: 34rem !important;
@@ -40,17 +70,21 @@
     width: 14rem !important;
     margin-top: 12rem;
     margin-left: 15rem;
-    border: 10px solid rgb(189, 189, 189);
+    border: 10px solid var(--primary);
     border-radius: 25px !important;
 }
 
 footer {
-    color: white;
-    background-color: rgb(3, 34, 61);
+    background-color: #020617;
+    color: #c7d2fe;
 }
 
 footer a{
-    color: white;
+    color: #c7d2fe;
+}
+
+footer a:hover {
+    color: var(--accent);
 }
 
 .f-top {
@@ -87,12 +121,39 @@ footer a{
     max-width: 360px;
 }
 
+.course-grid {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 2rem;
+  scroll-snap-type: x mandatory;
+  justify-content: flex-start;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+}
+
+.tc-arrow i {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .course-card{
     position: relative;
     width: 260px ;
-    height: 420px;
+    height: 340px;
     border-radius: 30px;
+    box-shadow: none;
     overflow: hidden;
+    scroll-snap-align: start;
+    min-width: 260px;
+    flex-shrink: 0;
+    background-color: transparent;
+    transition: all 0.3s ease;
 }
 
 .course-card img {
@@ -129,23 +190,70 @@ footer a{
 }
 
 .course-card:hover .course-info {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(79,70,229,0.25);
     opacity: 1;
     transform: translate(-50%, 0);
 }
 
 .h-nav a{
-    color: black;
+    color: var(--text-muted);
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .h-nav a:hover{
-    color: rgb(139, 139, 255);
+    color: var(--primary);
 }
 
 .bc-card{
     transition: transform 0.3s ease;
 }
 
+.bc-card .card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+}
+
 .bc-card:hover{
     transform: translateY(-10%) scale(1.05);
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-bt {
+  padding: 3rem;
+}
+
+.course-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  color: #fff;
 }
